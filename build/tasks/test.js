@@ -22,7 +22,7 @@ gulp.task('pre-unit-tests', ['transpile'], function() {
         .pipe(istanbul.hookRequire());
 });
 
-gulp.task('run-unit-tests', ['pre-unit-tests', 'eslint'], function(cb) {
+gulp.task('run-unit-tests', ['pre-unit-tests', 'tslint'], function(cb) {
     gulp.src(gulpConfig.javascriptUnitTests)
         .pipe(mocha({
             ui: mochaConfig.unitTestMochaInterface,
@@ -75,7 +75,7 @@ gulp.task('pre-component-integration-tests', ['transpile'], function() {
         .pipe(istanbul.hookRequire());
 });
 
-gulp.task('run-component-integration-tests', ['pre-component-integration-tests', 'eslint'], function(cb) {
+gulp.task('run-component-integration-tests', ['pre-component-integration-tests', 'tslint'], function(cb) {
     gulp.src(gulpConfig.javascriptComponentIntegrationTests)
         .pipe(mocha({
             ui: mochaConfig.componentIntegrationTestMochaInterface,

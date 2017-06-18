@@ -17,20 +17,19 @@
     }
   ],
   "scripts": {
-    "build": "gulp clean tslint transpile eslint check-security enforce-code-coverage",
+    "build": "gulp clean tslint transpile check-security enforce-code-coverage",
     "check-security": "gulp check-security",
     "clean": "gulp clean",
     "component-test": "gulp run-component-integration-tests",
     "enforce-code-coverage": "gulp enforce-code-coverage",
     "gulp": "gulp",
-    "lint": "gulp tslint eslint",
-    "tslint": "gulp tslint",
+    "lint": "gulp tslint",
     "show-unit-test-coverage": "gulp show-unit-test-coverage-report",
     "test": "gulp enforce-code-coverage check-security",
     "transpile": "gulp transpile"
   },
   "pre-commit": [
-    "tslint"
+    "lint"
   ],
   "devDependencies": {
     "@types/chai": "^3.4.34",
@@ -40,9 +39,7 @@
     "@types/sinon": "^1.16.35",
     "chai": "^3.5.0",
     "del": "^2.2.2",
-    "eslint": "^3.15.0",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
     "gulp-nsp": "^2.4.2",
