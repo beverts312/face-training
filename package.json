@@ -24,18 +24,19 @@
     "enforce-code-coverage": "gulp enforce-code-coverage",
     "gulp": "gulp",
     "lint": "gulp tslint eslint",
+    "tslint": "gulp tslint",
     "show-unit-test-coverage": "gulp show-unit-test-coverage-report",
     "test": "gulp enforce-code-coverage check-security",
     "transpile": "gulp transpile"
   },
   "pre-commit": [
-    "build"
+    "tslint"
   ],
   "devDependencies": {
-    "@types/node": "^7.0.5",
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.39",
-    "@types/request": "^0.0.40",
+    "@types/node": "^7.0.5",
+    "@types/request": "0.0.40",
     "@types/sinon": "^1.16.35",
     "chai": "^3.5.0",
     "del": "^2.2.2",
@@ -62,6 +63,7 @@
     "typescript": "^2.3.0"
   },
   "dependencies": {
-    "azure-face-sdk": "0.0.6-alpha"
+    "azure-face-sdk": "0.0.6-alpha",
+    "request": "^2.81.0"
   }
 }
