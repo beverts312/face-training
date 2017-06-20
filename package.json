@@ -60,7 +60,7 @@
     "typescript": "^2.3.0"
   },
   "dependencies": {
-    "azure-face-sdk": "0.0.6-alpha",
+    "azure-face-sdk": "0.0.7-alpha",
     "request": "^2.81.0"
   }
 }
